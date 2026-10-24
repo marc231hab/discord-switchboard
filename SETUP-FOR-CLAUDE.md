@@ -183,3 +183,13 @@ Start `bash scripts/start-grok-channel.sh config/grok/assistant.env`, or run `ru
 - **Missing thread/card/file:** inspect channel-level permissions and thread visibility, not just the server role.
 
 Report installed versions, directory, configured non-secret session names and the results of the owner's test. Never report tokens or password contents. Keep SQLite state for queued messages, transcript cursors and retry reconciliation. No automatic cron entry, public listener or system-wide service is installed by the core setup.
+
+## Add more agent channels (optional, one command)
+
+Once the first channel works, the agent can create a new Discord channel for each new project and start its session in one step:
+
+```bash
+bash scripts/new-channel.sh <name> claude|codex <project-dir> [--category <category-id>] [--topic "<text>"]
+```
+
+This creates the text channel with the bot, writes `config/<name>.env` (or `config/codex/<name>.env`), and starts the tmux session and bridge. It needs `DISCORD_GUILD_ID` in `global.env` and the **Manage Channels** permission for the bot. For Claude, attach once (`tmux attach -t <name>`) to confirm the development-channels prompt, then post a test message in the new channel. Use `--no-start` to only create the channel and config.
