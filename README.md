@@ -50,6 +50,7 @@ Invite it using the `bot` OAuth2 scope. Grant these permissions in every bound c
 - Create Public Threads, Send Messages in Threads and Manage Threads.
 - Attach Files, Embed Links and Add Reactions.
 - Pin Messages for the status card; Manage Messages for removal of stale lifecycle reactions.
+- Optional: Manage Channels, only if you want an agent to create a new channel per project itself. Running in existing channels doesn't need it.
 
 Also allow the configured users to view and write in those channels/threads. Channel overrides can deny permissions that the server role allows. No Administrator permission or public HTTP callback endpoint is required; message components are handled through the gateway.
 

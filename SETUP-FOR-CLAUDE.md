@@ -48,7 +48,7 @@ In the [Discord Developer Portal](https://discord.com/developers/applications):
 2. Create/reset its bot token as needed. The owner should enter it directly into the local private `global.env` file; never print it or paste it into chat.
 3. Enable **Message Content Intent**. Presence and member-list privileged intents are not needed by this connector.
 4. Use the installation/OAuth2 URL generator to invite it to the owner's server with the `bot` scope.
-5. Grant View Channels, Send Messages, Read Message History, Create Public Threads, Send Messages in Threads, Manage Threads, Attach Files, Embed Links and Add Reactions. Grant Pin Messages for status cards and Manage Messages for stale reaction cleanup.
+5. Grant View Channels, Send Messages, Read Message History, Create Public Threads, Send Messages in Threads, Manage Threads, Attach Files, Embed Links and Add Reactions. Grant Pin Messages for status cards and Manage Messages for stale reaction cleanup. Optionally grant **Manage Channels** if you want the agent to create a new Discord channel for each new project or session itself; the connector does not need it to run in channels that already exist.
 6. Check the target channel's permission overrides too. There is no need for Administrator or a public interactions endpoint.
 
 Enable Discord **Developer Mode** under the user's advanced settings. Copy the owner's user ID and the target text channel ID. An optional overview channel can have its own ID. These are configuration values, not channel names.
