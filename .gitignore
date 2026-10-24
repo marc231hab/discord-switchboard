@@ -1,0 +1,12 @@
+node_modules/
+**/__pycache__/
+*.py[cod]
+*.env
+*.env.*
+!config/*.example
+*.sqlite*
+*.log
+.mcp.json
+config/**/*.json
+config/**
+!config/*.example

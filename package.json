@@ -1,0 +1,21 @@
+{
+  "name": "discord-switchboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Discord Switchboard connects Claude Code, Codex, OpenCode and Grok sessions to Discord.",
+  "scripts": {
+    "start": "node --no-warnings src/router.js",
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check.js",
+    "start:direct": "node src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "discord.js": "^14.25.1",
+    "ws": "^8.22.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
